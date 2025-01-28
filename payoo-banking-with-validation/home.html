@@ -23,45 +23,92 @@
                         <div class="stats shadow">
                             <div class="stat">
 
-                                <div class="stat-value">9400</div>
+                                <div id="current-blance" class="stat-value">9400</div>
                                 <div class="stat-desc">Available Blance</div>
                             </div>
                         </div>
 
-                        <div class="divider"></div>
+                        <!-- <div class="divider"></div> -->
 
-                        <div class="space-x-3 space-y-3">
-                            <button class="btn btn-lg">add money</button>
-                            <button class="btn btn-lg">cashout</button>
+                        <div class="my-5">
+                            <button id="show-add-button" class="btn btn-accent">Add</button>
+                            <button id="show-cash-button" class="btn btn-accent">Cashout</button>
+                            <button id="show-trans-btn" class="btn btn-accent">Transactions</button>
 
-                            <button class="btn btn-lg">Transacitons</button>
+
                         </div>
 
-                        <div class="divider"></div>
+                        <!-- Add Money Form Start here -->
 
-                        <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
-                            <form class="card-body">
-                                <div class="form-control">
-                                    <label class="label">
-                                        <span class="label-text">Email</span>
-                                    </label>
-                                    <input type="email" placeholder="email" class="input input-bordered" required />
-                                </div>
-                                <div class="form-control">
-                                    <label class="label">
-                                        <span class="label-text">Password</span>
-                                    </label>
-                                    <input type="password" placeholder="password" class="input input-bordered"
-                                        required />
-                                    <label class="label">
-                                        <a href="#" class="label-text-alt link link-hover">Forgot password?</a>
-                                    </label>
-                                </div>
-                                <div class="form-control mt-6">
-                                    <button class="btn btn-primary">Login</button>
-                                </div>
-                            </form>
+                        <div class="p-2 ">
+                            <div id="show-add-form"
+                                class=" hidden card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                                <form class="card-body">
+                                    <div class="form-control">
+                                        <label class="label">
+                                            <span class="label-text">Add Money</span>
+                                        </label>
+                                        <input id="input-add-money" type="text" placeholder="add money"
+                                            class="input input-bordered" required />
+                                    </div>
+                                    <div class="form-control">
+                                        <label class="label">
+                                            <span class="label-text">pin</span>
+                                        </label>
+                                        <input id="input-add-pin" type="password" placeholder="password"
+                                            class="input input-bordered" required />
+
+                                    </div>
+                                    <div class="form-control mt-6">
+                                        <button id="add-send-money" class="btn btn-primary">Send Money</button>
+                                    </div>
+                                </form>
+                            </div>
                         </div>
+
+                        <!-- Add Money Form Ends here -->
+
+                        <!-- Cash Out Form Start here -->
+
+                        <div class="p-2">
+                            <div id="show-cash-form" class=" card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                                <form class="card-body">
+                                    <div class="form-control">
+                                        <label class="label">
+                                            <span class="label-text">Cashout Money</span>
+                                        </label>
+                                        <input id="cash-input" type="text" placeholder="add money"
+                                            class="input input-bordered" required />
+                                    </div>
+                                    <div class="form-control">
+                                        <label class="label">
+                                            <span class="label-text">pin</span>
+                                        </label>
+                                        <input id="cash-pin" type="password" placeholder="password"
+                                            class="input input-bordered" required />
+
+                                    </div>
+                                    <div class="form-control mt-6">
+                                        <button id="cash-out-btn" class="btn btn-primary">Cashout Money</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+                        <!-- Cash Out Form ends here -->
+
+                        <!-- Transaction Section Start here -->
+
+                        <div >
+                            <div id="transaction-history">
+                                <h2>Transaction History</h2>
+                            </div>
+                            <div id="transaction-container"> </div>
+                        </div>
+                        <!-- Transaction Section ends here -->
+
+
+
 
                     </div>
                 </div>
@@ -69,6 +116,12 @@
         </div>
 
     </main>
+
+    <script src="js/utility.js"></script>
+    <script src="js/addmoney.js"></script>
+    <script src="js/cashout.js"></script>
+    <script src="js/feature.js"></script>
+
 
 </body>
 
